@@ -1,0 +1,34 @@
+{
+  "name": "phone-number-generator",
+  "version": "1.0.0",
+  "description": "Generates random phone numbers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "NODE_ENV=production babel-node -- server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeze111/phone-number-generator.git"
+  },
+  "keywords": [],
+  "author": "Osaze Edo-Osagie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeze111/phone-number-generator/issues"
+  },
+  "homepage": "https://github.com/zeze111/phone-number-generator#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3"
+  }
+}
