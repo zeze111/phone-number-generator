@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production babel-node -- server.js"
+    "start": "NODE_ENV=development babel-node -- server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,9 @@
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.4.3"
+    "@babel/preset-env": "^7.4.3",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }
