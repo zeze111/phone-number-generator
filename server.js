@@ -11,10 +11,6 @@ const server = express();
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json({}));
 
-server.get("*", (req, res) => {
-  return handle(req, res);
-});
-
 server.use("/telecomms", routes);
 
 server.listen(3000, err => {

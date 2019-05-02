@@ -1,11 +1,11 @@
 import express from 'express';
-import controller from './controllers';
+import numbers from './controllers';
 
 const router = express.Router();
 
-router.post('/', controller.generate);
-// router.get('/phonenumbers');
-// router.get('/sort/:order');
-// router.get('./find/:max')
+router.post('/', numbers.generate);
+router.get('/phone-numbers', numbers.getAll);
+router.get('/phone-numbers/sort/:order', numbers.sortAll);
+router.delete('/phone-numbers', numbers.clearAll)
 
 export default router;
