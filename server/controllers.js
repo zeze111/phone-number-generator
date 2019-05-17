@@ -1,5 +1,6 @@
 import { phoneNumbers, storageLimit } from "./storage";
 import { validateLimit } from "./validators";
+import { paginationData } from "./helper";
 
 export default class PhoneNumbers {
   static generate(req, res) {
@@ -17,12 +18,11 @@ export default class PhoneNumbers {
         const numbers = [];
 
         while (numbers.length < limit) {
-          const number = "310" + Math.floor(Math.random() * 10000000 + 10);
-          const phoneNo = parseInt(number);
+          const number = "031" + Math.floor(Math.random().toString().slice(2,9));
 
-          if (!numbers.includes(phoneNo) && !phoneNumbers.includes(phoneNo)) {
-            numbers.push(phoneNo);
-            phoneNumbers.push(phoneNo);
+          if (!numbers.includes(number) && !phoneNumbers.includes(number)) {
+            numbers.push(number);
+            phoneNumbers.push(number);
           } else if (phoneNumbers.length >= storageLimit - 1) {
             return res.status(417).json({
               status: "Unsuccessful",
@@ -50,10 +50,13 @@ export default class PhoneNumbers {
         ++count;
       });
 
+      const limit = req.query && req.query.limit;
+      const offset = req.query && req.query.offset;
       return res.status(200).json({
         status: "Successful",
         numbers: phoneNumbers,
-        total: count
+        total: count,
+        pagination: paginationData(count, limit, offset)
       });
     } else {
       return res.status(200).json({
@@ -67,6 +70,13 @@ export default class PhoneNumbers {
     if (phoneNumbers.length >= 1) {
       let maxNumber;
       let minNumber;
+      let count = 0;
+      const limit = req.query && req.query.limit;
+      const offset = req.query && req.query.offset;
+
+      phoneNumbers.forEach(() => {
+        ++count;
+      });
       if (req.params.order.includes("asc")) {
         phoneNumbers.sort((x, y) => {
           return x - y;
@@ -78,7 +88,8 @@ export default class PhoneNumbers {
           status: "Successful",
           numbers: phoneNumbers,
           minNumber,
-          maxNumber
+          maxNumber,
+          pagination: paginationData(count, limit, offset)
         });
       } else if (req.params.order.includes("desc")) {
         phoneNumbers.sort((x, y) => {
@@ -91,7 +102,8 @@ export default class PhoneNumbers {
           status: "Successful",
           numbers: phoneNumbers,
           minNumber,
-          maxNumber
+          maxNumber,
+          pagination: paginationData(count, limit, offset)
         });
       } else {
         return res.status(406).json({

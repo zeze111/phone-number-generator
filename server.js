@@ -9,13 +9,25 @@ const handle = app.getRequestHandler();
 
 const server = express();
 server.use(bodyParser.urlencoded({ extended: false }));
-server.use(bodyParser.json({}));
+server.use(bodyParser.json());
 
 server.use("/telecomms", routes);
 
-server.listen(3000, err => {
-  if (err) throw err;
-  console.log("> Ready on http://localhost:3000");
-});
+app
+  .prepare()
+  .then(() => {
+    server.get("*", (req, res) => {
+        return handle(req, res);
+      });
+
+    server.listen(3000, err => {
+      if (err) throw err;
+      console.log("> Ready on http://localhost:3000");
+    });
+  })
+  .catch(ex => {
+    console.error(ex.stack);
+    process.exit(1);
+  });
 
 export default server;

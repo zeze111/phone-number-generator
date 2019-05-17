@@ -1,0 +1,172 @@
+header {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+#overlay2 {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+}
+.nav {
+  list-style-type: none;
+  background-color: #2d74da;
+  margin: 0;
+  padding: 18px 0px 18px 0px;
+  overflow: hidden;
+}
+.nav-mobile {
+  display: none;
+}
+.nav-link {
+  float: left;
+  font-size: 20px;
+}
+.nav-link2 {
+  float: right;
+  font-size: 18px;
+}
+.nav-list {
+  display: block;
+  width: 7em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding-left: 20px;
+}
+.nav-list3 {
+  display: block;
+  width: 7em;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-content {
+  position: absolute;
+  background-color: #fdfefe;
+  text-align: center;
+  width: 283px;
+  height: 90%;
+  padding-top: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: 0.9s !important;
+}
+
+.sidebar-list {
+  width: 283px;
+  height: 60px;
+  padding-left: 35px;
+  text-align: left;
+  font-size: 18px;
+  font-family: Lato;
+  border: none;
+  outline: none;
+  background-color: #fdfefe;
+  color: rgb(125, 140, 153);
+}
+
+.sidebar-div button:hover {
+  color: #2d74da;
+  text-decoration: underline;
+}
+
+.sidebar-inner-text {
+  padding-top: 23px;
+  cursor: pointer;
+}
+
+.sidebar-inner-text2 {
+  position: relative;
+  left: 40px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.generate-text {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+}
+
+.content {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  top: 50px;
+  left: 300px;
+  background-color: #fdfefe;
+}
+
+.generate-content {
+  position: relative;
+  top: 50px;
+  left: 60px;
+}
+
+.generate-numbers {
+  overflow-y: scroll;
+  z-index: 3;
+  width: 800px;
+  height: 200px;
+  background-color: rgb(233, 233, 233);
+}
+
+.generate-form {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+input {
+  margin-left: 10px;
+}
+
+.submit-button {
+  height: 22px;
+  margin-left: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.order-button {
+  height: 22px;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  color: #2d74da;
+  border: none;
+  border-radius: 4px;
+}
+
+.clear-button {
+  height: 22px;
+  font-size: 14px;
+  margin: 0 0 20px 20px;
+  color: #2d74da;
+  border: none;
+  border-radius: 4px;
+}
+
+.numbers {
+  margin: 5px;
+}
+
+.list-numbers {
+  overflow-y: scroll;
+  z-index: 3;
+  width: 600px;
+  height: 200px;
+  background-color: rgb(233, 233, 233);
+}
