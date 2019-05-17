@@ -1,7 +1,15 @@
-const Index = () => (
-  <div>
-    <p>Hello Next.js</p>
-  </div>
-)
+import Header from "./components/header";
+import Content from "./components/content";
+import { listNumbers } from "./actions";
 
-export default Index
+const Index = props => {
+  return (
+    <div>
+      <Header />
+      <Content />
+    </div>
+  );
+};
+
+
+export default Index;

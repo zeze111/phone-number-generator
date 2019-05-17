@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=development babel-node -- server.js",
+    "start": "NODE_ENV=development nodemon --exec babel-node -- server.js",
     "test": "NODE_ENV=test mocha --exit ./server/tests --require @babel/register"
   },
   "repository": {
@@ -21,8 +21,14 @@
   },
   "homepage": "https://github.com/zeze111/phone-number-generator#readme",
   "dependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@zeit/next-css": "^1.0.1",
     "chai-http": "^4.3.0",
+    "codecov": "^3.5.0",
+    "coveralls": "^3.0.3",
     "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -31,10 +37,10 @@
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.4.3",
     "@babel/register": "^7.4.4",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0"
   }
 }

@@ -58,12 +58,12 @@ describe("generate phone number", () => {
     chai
       .request(server)
       .post("/telecomms")
-      .send({ limit: "ten" })
+      .send({ limit: "" })
       .end((err, res) => {
         should.not.exist(err);
         res.status.should.equal(422);
         res.body.status.should.equal("Unsuccessful");
-        res.body.message.should.equal("Limit must be a number");
+        res.body.message.should.equal("Please enter a limit");
         done();
       });
   });
