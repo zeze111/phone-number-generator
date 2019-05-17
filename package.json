@@ -7,7 +7,9 @@
     "dev": "next",
     "build": "next build",
     "start": "NODE_ENV=development nodemon --exec babel-node -- server.js",
-    "test": "NODE_ENV=test mocha --exit ./server/tests --require @babel/register"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "npm run coverage -- --report lcov only && cat ./coverage/lcov.info | coveralls",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --exit ./server/tests --require @babel/register"
   },
   "repository": {
     "type": "git",
@@ -25,8 +27,6 @@
     "@babel/preset-react": "^7.0.0",
     "@zeit/next-css": "^1.0.1",
     "chai-http": "^4.3.0",
-    "codecov": "^3.5.0",
-    "coveralls": "^3.0.3",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
@@ -40,7 +40,10 @@
     "@babel/register": "^7.4.4",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
+    "codecov": "^3.5.0",
+    "coveralls": "^3.0.3",
     "mocha": "^6.1.4",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "nyc": "^14.1.1"
   }
 }
