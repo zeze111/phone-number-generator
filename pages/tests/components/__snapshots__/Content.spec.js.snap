@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content should render the component 1`] = `
+<div
+  className=".body"
+>
+  <div
+    className="sidebar-content"
+  >
+    <Sidebar
+      linkNo={1}
+      setLinkNo={[Function]}
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <Generate />
+  </div>
+</div>
+`;

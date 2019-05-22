@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generate should render the component 1`] = `
+<div
+  className="generate-content"
+>
+  <h3>
+     Generate New Numbers 
+  </h3>
+  <p
+    className="generate-text"
+  >
+    Please enter the amount of numbers to generate
+  </p>
+  <form
+    className="generate-form"
+  >
+    Limit:
+    <input
+      id="limit"
+      name="limit"
+      onChange={[Function]}
+      type="text"
+    />
+    <button
+      className="submit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Enter
+    </button>
+  </form>
+  <div
+    className="generate-numbers"
+  >
+    <ul>
+      <li
+        className="numbers"
+        key="0"
+      >
+        012
+      </li>
+      <li
+        className="numbers"
+        key="1"
+      >
+        123
+      </li>
+      <li
+        className="numbers"
+        key="2"
+      >
+        234
+      </li>
+      <li
+        className="numbers"
+        key="3"
+      >
+        345
+      </li>
+    </ul>
+  </div>
+</div>
+`;

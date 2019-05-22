@@ -24,8 +24,8 @@ class NumbersList extends Component {
   };
 
   clearList = async () => {
-    const numbers = await clearNumbersStorage();
-    this.setState({ numbers, message: numbers.message });
+    const response = await clearNumbersStorage();
+    this.setState({ numbers: [], message: response.message });
   };
 
   render() {
