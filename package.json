@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=development nodemon --exec babel-node -- server.js",
+    "heroku-postbuild": "npm run build",
+    "start": "NODE_ENV=production nodemon --exec babel-node -- server.js",
     "test:client": "jest -u /pages/* && codecov",
     "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --exit ./server/tests --require @babel/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
