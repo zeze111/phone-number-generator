@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render the component 1`] = `
+<header>
+  <ul
+    className="nav"
+  >
+    <li
+      className="nav-link"
+    >
+      <a
+        className="nav-list"
+        href=""
+      >
+         TELECOMMS
+      </a>
+    </li>
+    <li
+      className="nav-link2 profile"
+    >
+      <a
+        className="nav-list3"
+        href=""
+      >
+         Admin
+      </a>
+    </li>
+  </ul>
+</header>
+`;

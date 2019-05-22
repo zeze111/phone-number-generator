@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=development nodemon --exec babel-node -- server.js",
+    "heroku-postbuild": "npm run build",
+    "start": "NODE_ENV=production nodemon --exec babel-node -- server.js",
+    "test:client": "jest -u /pages/* && codecov",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --exit ./server/tests --require @babel/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "coveralls": "npm run coverage -- --report lcov only && cat ./coverage/lcov.info | coveralls",
-    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --exit ./server/tests --require @babel/register"
+    "coverage:all": "npm run coverage && npm run test:client"
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,8 @@
     "@zeit/next-css": "^1.0.1",
     "chai-http": "^4.3.0",
     "express": "^4.16.4",
-    "isomorphic-unfetch": "^3.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -42,6 +46,11 @@
     "chai": "^4.2.0",
     "codecov": "^3.5.0",
     "coveralls": "^3.0.3",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
+    "enzyme-to-json": "^3.3.5",
+    "fetch-mock": "^7.3.3",
+    "jest": "^24.8.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.0",
     "nyc": "^14.1.1"

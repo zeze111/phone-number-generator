@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar should render the component 1`] = `
+<div
+  className="sidebar-div"
+>
+  <button
+    className="pressed"
+    id="generate"
+    onClick={[Function]}
+  >
+    <p
+      className="sidebar-inner-text2"
+    >
+      Generate Numbers
+    </p>
+  </button>
+  <button
+    className="sidebar-list"
+    id="list"
+    onClick={[Function]}
+  >
+    <p
+      className="sidebar-inner-text2"
+    >
+      Numbers
+    </p>
+  </button>
+  <button
+    className="sidebar-list"
+  >
+    <p
+      className="sidebar-inner-text2"
+    >
+      Accounts
+    </p>
+  </button>
+  <button
+    className="sidebar-list"
+  >
+    <p
+      className="sidebar-inner-text2"
+    >
+      Settings
+    </p>
+  </button>
+</div>
+`;
