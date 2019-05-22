@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { GENERATE_NUMBERS } from "../types";
 import { generateNumbers } from "../actions";
 
 class Generate extends Component {
@@ -27,13 +26,13 @@ class Generate extends Component {
   render() {
     return (
       <div className="generate-content">
-      <h3> Generate New Numbers </h3>
+        <h3> Generate New Numbers </h3>
         <p className="generate-text">
           Please enter the amount of numbers to generate
         </p>
         <form className="generate-form">
           Limit:
-          <input type="text" name="limit" onChange={this.onChange} />
+          <input type="text" name="limit" id="limit" onChange={this.onChange} />
           <button
             className="submit-button"
             type="button"
@@ -46,7 +45,11 @@ class Generate extends Component {
           <ul>
             {this.state.numbers &&
               this.state.numbers.map((number, index) => {
-                return <li key={index} className="numbers">{number}</li>;
+                return (
+                  <li key={index} className="numbers">
+                    {number}
+                  </li>
+                );
               })}
           </ul>
         </div>

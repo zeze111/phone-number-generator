@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumbersList renders the component 1`] = `
+<div>
+  <div
+    className="generate-content"
+  >
+    <h3>
+       List of Numbers Generated 
+    </h3>
+    <div>
+      <button
+        className="order-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Order
+      </button>
+      asc
+      <button
+        className="clear-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
+    <div
+      className="list-numbers"
+    >
+      <ul>
+        <li
+          className="numbers"
+          key="0"
+        >
+          012
+        </li>
+        <li
+          className="numbers"
+          key="1"
+        >
+          123
+        </li>
+        <li
+          className="numbers"
+          key="2"
+        >
+          234
+        </li>
+        <li
+          className="numbers"
+          key="3"
+        >
+          345
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p>
+         Total Numbers Generated: 
+      </p>
+      <p>
+         Minimum Number Generated: 
+      </p>
+      <p>
+         Maximum Number Generated: 
+      </p>
+    </div>
+  </div>
+</div>
+`;

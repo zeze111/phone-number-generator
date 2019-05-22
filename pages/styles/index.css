@@ -1,23 +1,13 @@
 header {
-  margin: 0;
+  margin-top: 20px;
 }
 
-body {
+.body {
   margin: 0;
+  position: relative;
+  bottom: 19px;
 }
 
-#overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-}
-#overlay2 {
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  padding-bottom: 1.5em;
-  margin-top: 2em;
-}
 .nav {
   list-style-type: none;
   background-color: #2d74da;
@@ -25,9 +15,7 @@ body {
   padding: 18px 0px 18px 0px;
   overflow: hidden;
 }
-.nav-mobile {
-  display: none;
-}
+
 .nav-link {
   float: left;
   font-size: 20px;
@@ -76,6 +64,20 @@ body {
   outline: none;
   background-color: #fdfefe;
   color: rgb(125, 140, 153);
+}
+
+.pressed {
+  width: 283px;
+  height: 60px;
+  padding-left: 35px;
+  text-align: left;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  font-family: Lato;
+  background-color: #fdfefe;
+  color: #2d74da;
+  border-left: 5px solid #2d74da;
 }
 
 .sidebar-div button:hover {
