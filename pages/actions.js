@@ -11,7 +11,7 @@ export const generateNumbers = limit =>
     },
     body: JSON.stringify({ limit })
   }).then(response => {
-    response.json().catch(error => {
+    return response.json().catch(error => {
       console.error(error);
     });
   });
@@ -20,7 +20,7 @@ export const listNumbers = (offset, limit) =>
   fetch(
     `${server}/telecomms/phone-numbers?limit=${limit}&offset=${offset}`
   ).then(response => {
-    response.json().catch(error => {
+    return response.json().catch(error => {
       console.error(error);
     });
   });
@@ -29,7 +29,7 @@ export const sortNumbers = (order, offset, limit) =>
   fetch(
     `${server}/telecomms/phone-numbers/sort/${order}?limit=${limit}&offset=${offset}`
   ).then(response => {
-    response.json().catch(error => {
+    return response.json().catch(error => {
       console.error(error);
     });
   });
@@ -42,7 +42,7 @@ export const clearNumbersStorage = () =>
       "Content-Type": "application/json"
     }
   }).then(response => {
-    response.json().catch(error => {
+    return response.json().catch(error => {
       console.error(error);
     });
   });
