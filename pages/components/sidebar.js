@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Sidebar = props => {
   return (
     <div className="sidebar-div">

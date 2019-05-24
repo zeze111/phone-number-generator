@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import Content from "./components/Content";
+import Header from "./components/header";
+import Content from "./components/content";
 import { listNumbers } from "./actions";
 
 const Index = () => {

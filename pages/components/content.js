@@ -1,7 +1,7 @@
 import { Component } from "react";
-import Sidebar from "./Sidebar";
-import Generate from "./Generate";
-import NumbersList from "./NumbersList";
+import Sidebar from "./sidebar";
+import Generate from "./generate";
+import NumbersList from "./numbersList";
 
 class Content extends Component {
   state = {
